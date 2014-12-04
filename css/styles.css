@@ -1,0 +1,251 @@
+/* =========
+Global Styling
+* font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+* bg.png file for background
+========= */
+body {
+	background: #fff;
+	color: #333;
+	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+
+
+}
+
+body:hover {
+	/* animate then stop at last frame */
+	-webkit-animation: bgload 1s forwards;
+	-animation: bgload 1s forwards;
+}
+
+p {
+ 	line-height: 24px;
+}
+
+
+/* =========
+Blockquote
+* color #e44d26
+* font size 2em
+* font style italic
+* letter spacing 1px
+* text aligned center
+========= */
+blockquote {
+	color: #e44d26;
+	font-size: 2em;
+	font-style: italic;
+	letter-spacing: 1px;
+	text-align: center; 
+}
+
+/* =========
+HEADER
+========= */
+header img {
+	-webkit-animation: bounce 1s infinite;
+	-o-animation: bounce 1s infinite;
+	animation: bounce 1s infinite;
+}
+
+/* =========
+Navigation
+* List Items - Navigation provided
+
+Anchor Links
+* padding: 10px 10px 10px 40px;
+* color on hover #E44D26
+========= */
+nav li {
+	float: left;
+	list-style: none;
+	margin: 0 10px 0 10px;
+}
+
+/* Base link styling */
+nav a:link, 
+nav a:visited {
+	color: #333;
+	padding: 10px 10px 10px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+nav a:hover, 
+nav a:active {
+	color: #E44D26;
+}
+
+/* on hover show home.png */
+#home a:hover {
+	background: url("../img/icons/home.png") no-repeat left center;
+}
+
+/* on hover show home.png */
+#super a:hover {
+	background: url("../img/icons/super.png") no-repeat left center;
+}
+
+/* on hover show home.png */
+#html5 a:hover {
+	background: url("../img/icons/html5.png") no-repeat left center;
+}
+
+/* =========
+Super Friends
+* font-family: 'Open Sans', sans-serif;
+* text-indent: 32px;
+* line-height: 24px;
+========= */
+h3 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+article img {
+	border: 10px solid #fff;
+	
+	/* 3D Transform */
+	transform: perspective(420px) rotateY(45deg) scale(.8);
+	transition: transform .5s;
+}
+
+article img:hover {
+	transform: rotateY(0);	
+}
+
+img + p {
+	text-indent: 32px;
+}
+
+/* =========
+Footer
+* arial font for paragraphs
+========= */
+footer p {
+	font: 10px/16px 'arial', sans-serif;
+}
+
+
+/* =========
+MEDIA QUERIES
+========= */
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+	
+	body {
+		background: yellow !important;
+	}
+
+
+	nav ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	blockquote {
+		font-size: 1.5em;
+	}
+
+	nav li {
+		float: none;
+		margin: 4% 0;
+	}
+
+	article section.grid_3 {
+		margin: 0;
+		width: 48%;
+	}
+
+	footer p.grid_6 {
+		width: 100%;
+		margin: 2% 0;
+	}
+
+}
+
+/* Transition Media Queries */
+article section.grid_3 {
+	transition: width 2s;
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+	
+	body {
+		background: green !important;
+	}
+
+	nav ul {
+		margin: 0;
+		padding: 0;
+	}
+	
+	nav.grid_9 {
+		width: 100%;
+	}
+
+	header.grid_3 {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}	
+	
+	blockquote {
+		font-size: 1em;
+	}
+
+	nav li {
+		text-align: center;
+	}
+
+	article section.grid_3 {
+		margin: 0;
+		width: 100%;
+	}
+	
+}
+
+/* =========
+ANIMATIONS
+========= */
+@-webkit-keyframes bgload {
+	0% {
+		background: #fff;
+	}
+
+	50% {
+		background: #ccc;
+	}
+	
+	100% {
+		background: url("../img/bg.png");;
+	}
+}
+
+@keyframes bgload {
+	0% {
+		background: #fff;
+	}
+
+	50% {
+		background: #ccc;
+	}
+	
+	100% {
+		background: url("../img/bg.png");;
+	}
+}
+
+@-webkit-keyframes bounce {
+	0% {
+		transform: translateY(0px)
+	}
+
+	50% {
+		transform: translateY(10px)
+	}
+	
+	100% {
+		transform: translateY(0px)
+	}
+}
